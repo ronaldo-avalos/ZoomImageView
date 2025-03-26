@@ -88,6 +88,15 @@ You can customize the behavior of `ZoomImageView` using the following modifiers:
 ## **Contributions**
  Contributions are welcome. If you encounter any issues or have suggestions, please open an issue or submit a pull request.   
 
+# Donate
+
+Show your appreciation by donating me a coffee. Thank you very much!
+
+<a href="https://buymeacoffee.com/ronaldo_avalos" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="160">
+</a>
+
+
 ## **Author**
 @Roandlo Avalos github.com/ronaldo-avalos
 
