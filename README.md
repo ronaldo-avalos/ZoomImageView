@@ -3,8 +3,9 @@
   <h1><b>ZoomImageView</b></h1>
   <p>
 ZoomImageViewPackage is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using UIScrollView and UIImageView as a UIViewRepresentable, allowing for easy integration into SwiftUI applications.
+Supports both remote (init with URL) & local (init with UIImages) images. 
     <br>
-    <i>Compatible with iOS 14.0 and later</i>
+    <i>Compatible with iOS 15.0 and later</i>
   </p>
 </div>
 
@@ -23,6 +24,7 @@ ZoomImageViewPackage is a SwiftUI component that provides an image view with zoo
 ## **Overview**
 
 `ZoomImageViewPackage` is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using `UIScrollView` and `UIImageView` as a `UIViewRepresentable`, allowing for easy integration into SwiftUI applications.
+Supports both remote (init with URL) & local (init with UIImages) images.
 
 
 ![Example](/assets/example.gif)
