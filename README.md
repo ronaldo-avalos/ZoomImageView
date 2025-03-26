@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="360" height="439" src="/assets/icon.png" alt="ZoomImageView Logo">
+  <img width="300" height="300" src="/assets/icon.png" alt="ZoomImageView Logo">
   <h1><b>ZoomImageView</b></h1>
   <p>
 ZoomImageViewPackage is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using UIScrollView and UIImageView as a UIViewRepresentable, allowing for easy integration into SwiftUI applications.
