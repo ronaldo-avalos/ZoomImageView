@@ -2,7 +2,7 @@
   <img width="360" height="439" src="/assets/icon.png" alt="ZoomImageView Logo">
   <h1><b>ZoomImageView</b></h1>
   <p>
-ZoomableImageViewPackage is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using UIScrollView and UIImageView as a UIViewRepresentable, allowing for easy integration into SwiftUI applications.
+ZoomImageViewPackage is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using UIScrollView and UIImageView as a UIViewRepresentable, allowing for easy integration into SwiftUI applications.
     <br>
     <i>Compatible with iOS 14.0 and later</i>
   </p>
@@ -22,7 +22,7 @@ ZoomableImageViewPackage is a SwiftUI component that provides an image view with
 
 ## **Overview**
 
-`ZoomableImageViewPackage` is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using `UIScrollView` and `UIImageView` as a `UIViewRepresentable`, allowing for easy integration into SwiftUI applications.
+`ZoomImageViewPackage` is a SwiftUI component that provides an image view with zoom and pan functionality. It's built using `UIScrollView` and `UIImageView` as a `UIViewRepresentable`, allowing for easy integration into SwiftUI applications.
 
 
 ![Example](/assets/example.gif)
@@ -45,14 +45,14 @@ Below I show how to call the component for its use, it has default parameters bu
 
 ```swift
 import SwiftUI
-import ZoomaImageViewPackage
+import ZoomImageViewPackage
 
 struct ContentView: View {
     let imageName = "your_image_name" // Replace with your image name
 
     var body: some View {
         if let image = UIImage(named: imageName) {
-            ZoomableImageView(image: image)
+            ZoomImageView(image: image)
                 .maximumZoomScale(5.0)
                 .minimumZoomScale(0.5)
                 .showsHorizontalScrollIndicator(true)
@@ -74,7 +74,7 @@ struct ContentView: View {
 
 ## **Customizable Parameters**
 
-You can customize the behavior of `ZoomableImageView` using the following modifiers:
+You can customize the behavior of `ZoomImageView` using the following modifiers:
 
 - `maximumZoomScale(_: CGFloat)`: Sets the maximum zoom scale allowed.
 - `minimumZoomScale(_: CGFloat)`: Sets the minimum zoom scale allowed.
