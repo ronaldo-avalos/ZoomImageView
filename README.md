@@ -33,7 +33,7 @@ Supports both remote (init with URL) & local (init with UIImages) images.
 
 ### Swift Package Manager
 
-You can use The Swift Package Manager to install Toast-Swift by adding the description to your Package.swift file:
+You can use The Swift Package Manager to install ZoomImageView by adding the description to your Package.swift file:
 ```swift
 dependencies: [
     .package(url: "https://github.com/ronaldo-avalos/ZoomImageView", from: "1.1.0")
