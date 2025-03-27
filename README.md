@@ -34,24 +34,38 @@ Supports both remote (init with URL) & local (init with UIImages) images.
 ### Swift Package Manager
 
 1. In Xcode, navigate to **File > Add Packages...**
-2. Enter the repository URL:  
-   `https://github.com/ronaldo-avalos/ZoomImageView`
-3. Follow the prompts to add the package to your project.
+2. Enter the repository URL:
+```swift
+    .package(url: "https://github.com/yourusername/ZoomImageView.git", from: "1.1.0")
+```
+4. Follow the prompts to add the package to your project.
 
 ---
+## **Features**
+- **Local & Remote Image Support:** Display and zoom into images from your app's bundle (`UIImage`) or from any URL.
+- **Enhanced Double-Tap Zoom:** Enjoy intuitive zoom-to-area functionality, just like in Apple Photos. Simply double-tap on the area you want to magnify.
+- **Immersive Fullscreen View:** The image preview now opens in a dedicated fullscreen view, providing a more focused and immersive experience.
+- **Swipe to Dismiss:** Easily dismiss the preview by swiping down, which also automatically resets the zoom level.
+- **Ready-to-Use Previews:** The package includes SwiftUI previews demonstrating how to use the component with both local and remote images.
 
 
 
 ## **Usage**
 Below I show how to call the component for its use, it has default parameters but you can modify them.
 
+
+
+### Local Images
+
+To display a local image in the view with zoom support, use the following code:
+
 ```swift
 import SwiftUI
-import ZoomImageViewPackage
+import ZoomImageView
 
 struct ContentView: View {
-    let imageName = "your_image_name" // Replace with your image name
-
+    let imageName: String = "localImage" // Replace with your local image name
+    
     var body: some View {
         if let image = UIImage(named: imageName) {
             ZoomImageView(image: image)
@@ -67,11 +81,24 @@ struct ContentView: View {
         }
     }
 }
+```
 
-#Preview {
-    ContentView()
+### Asynchronous Images (from URL)
+
+To load an image from a URL asynchronously and display it with zoom support, use the following code:
+
+```swift
+import SwiftUI
+import ZoomImageView
+
+struct ContentView: View {
+    let imageURL: URL = URL(string: "https://example.com/image.jpg")! // Replace with your image URL
+    
+    var body: some View {
+        ImageLoadingView(imageURL: imageURL)
+            .frame(width: 300, height: 200)
+    }
 }
-
 ```
 
 ## **Customizable Parameters**
@@ -88,7 +115,7 @@ You can customize the behavior of `ZoomImageView` using the following modifiers:
 - `contentMode(_: UIView.ContentMode)`: Sets the content mode of the image (e.g., .scaleAspectFit, .scaleAspectFill, etc.).
 
 ## **Contributions**
- Contributions are welcome. If you encounter any issues or have suggestions, please open an issue or submit a pull request.   
+ Contributions are welcome. If you encounter any issues or have suggestions, please open an issue or submit a pull request.   
 
 # Donate
 
@@ -104,4 +131,3 @@ Show your appreciation by donating me a coffee. Thank you very much!
 
 ## **License**
 RenderMeThis is available under the MIT license. See the [LICENSE](LICENSE) file for more information.
-
