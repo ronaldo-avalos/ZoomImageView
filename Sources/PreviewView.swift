@@ -8,7 +8,6 @@
 import SwiftUI
 import UIKit
 
-@main
 struct PreviewView: App {
     var body: some Scene {
         WindowGroup {
