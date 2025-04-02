@@ -148,7 +148,10 @@ public struct ZoomImageView: UIViewRepresentable {
         
         func updateImageViewFrame(forceZoomReset: Bool = false) {
             guard let scrollView = scrollView, let imageView = imageView, let image = imageView.image else { return }
-            
+
+            // Update the layout once to fit the screen size
+            scrollView.layoutIfNeeded()
+
             // Only proceed if the scroll view has valid dimensions
             if scrollView.bounds.width <= 0 || scrollView.bounds.height <= 0 {
                 // Schedule another attempt if the bounds aren't valid yet
