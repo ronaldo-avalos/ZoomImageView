@@ -112,24 +112,16 @@ public struct ZoomImageView: UIViewRepresentable {
         context.coordinator.doubleTapZoomScale = doubleTapZoomScale
         context.coordinator.onDragEnd = onDragEnd
         context.coordinator.dragThreshold = dragThreshold
-        
-        // Schedule a delayed layout update to ensure proper initialization
-        DispatchQueue.main.async {
-            context.coordinator.updateImageViewFrame(forceZoomReset: true)
-        }
+        context.coordinator.updateImageViewFrame(forceZoomReset: true)
         
         return scrollView
     }
     
     public func updateUIView(_ uiView: UIScrollView, context: Context) {
         context.coordinator.imageView?.image = image
-        
-        // Schedule a delayed update to ensure proper layout
-        DispatchQueue.main.async {
-            context.coordinator.updateImageViewFrame(forceZoomReset: false)
-            context.coordinator.onDragEnd = onDragEnd
-            context.coordinator.dragThreshold = dragThreshold
-        }
+        context.coordinator.updateImageViewFrame(forceZoomReset: false)
+        context.coordinator.onDragEnd = onDragEnd
+        context.coordinator.dragThreshold = dragThreshold
     }
     
     public func makeCoordinator() -> Coordinator {
@@ -149,7 +141,7 @@ public struct ZoomImageView: UIViewRepresentable {
         func updateImageViewFrame(forceZoomReset: Bool = false) {
             guard let scrollView = scrollView, let imageView = imageView, let image = imageView.image else { return }
 
-            // Update the layout once to fit the screen size
+            // Apply pending layout changes to make sure scrollView.bounds is accurate
             scrollView.layoutIfNeeded()
 
             // Only proceed if the scroll view has valid dimensions
