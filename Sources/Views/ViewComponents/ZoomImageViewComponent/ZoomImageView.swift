@@ -89,7 +89,7 @@ public struct ZoomImageView: UIViewRepresentable {
         scrollView.showsVerticalScrollIndicator = showsVerticalScrollIndicator
         scrollView.alwaysBounceVertical = alwaysBounceVertical
         scrollView.alwaysBounceHorizontal = alwaysBounceHorizontal
-        scrollView.contentInsetAdjustmentBehavior = .automatic
+        scrollView.contentInsetAdjustmentBehavior = .never
         
         let imageView = UIImageView(image: image)
         imageView.contentMode = contentMode
